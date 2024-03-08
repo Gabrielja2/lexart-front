@@ -9,27 +9,21 @@ const HomePage = () => {
     const userToken = localStorage.getItem("token");
     const navigate = useNavigate();
 
-    const fetchProducts = useCallback(async () => {
-        const products = await getProductsService();
+    const onSearch = useCallback(async (searchText) => {
+        const newProducts = await getProductsService(searchText);
 
-        setProducts(products);
+        setProducts(newProducts);
     }, []);
 
     useEffect(() => {
-        fetchProducts();
-    }, [fetchProducts]);
+        onSearch();
+    }, [onSearch]);
 
     useEffect(() => {
         if (!userToken) {
             navigate("/login");
         }
     }, []);
-
-    const onSearch = async (searchText) => {
-        const newProducts = await getProductsService(searchText);
-        console.log("newProducts", newProducts);
-        setProducts(newProducts);
-    };
 
     return (
         <div style={{ backgroundColor: "#333" }}>

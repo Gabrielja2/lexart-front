@@ -46,7 +46,7 @@ export function ProductCard(props) {
                         name="name"
                         className="product-info"
                         onChange={handleChangeInput("name")}
-                        defaultValue={fields.name}
+                        value={fields.name}
                         disabled={isEditing ? false : true}
                         autoComplete="off"
                     />
@@ -60,7 +60,7 @@ export function ProductCard(props) {
                         name="brand"
                         className="product-info"
                         onChange={handleChangeInput("brand")}
-                        defaultValue={fields.brand}
+                        value={fields.brand}
                         disabled={isEditing ? false : true}
                         autoComplete="off"
                     />
@@ -74,7 +74,7 @@ export function ProductCard(props) {
                         name="model"
                         className="product-info"
                         onChange={handleChangeInput("model")}
-                        defaultValue={fields.model}
+                        value={fields.model}
                         disabled={isEditing ? false : true}
                         autoComplete="off"
                     />
@@ -88,7 +88,7 @@ export function ProductCard(props) {
                         type="text"
                         className="product-info"
                         onChange={handleChangeInput("color")}
-                        defaultValue={fields.color}
+                        value={fields.color}
                         disabled={isEditing ? false : true}
                         autoComplete="off"
                     />

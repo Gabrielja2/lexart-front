@@ -35,8 +35,7 @@ const HomeContent = (props) => {
                 renderProductsMap(products)
             ) : (
                 <div className="products-message-container">
-                    Ainda não existe productos cadastrados. Clique no botão
-                    criar para criar um.
+                    Produto não cadastrado. Clique no botão criar para criar um.
                 </div>
             )}
         </div>

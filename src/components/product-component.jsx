@@ -42,8 +42,6 @@ const ProductComponent = () => {
         if (typeof response === "string") {
             nagivate("/");
         }
-
-        console.log("response", response);
     };
 
     useEffect(() => {
