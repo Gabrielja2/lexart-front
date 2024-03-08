@@ -1,6 +1,6 @@
 import { API_BASE_URI } from "../../env.js";
 const loginService = async (data) => {
-    const response = await fetch(`${API_BASE_URI}/api/users/login`, {
+    const response = await fetch(`${API_BASE_URI}api/users/login`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
