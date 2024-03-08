@@ -1,7 +1,7 @@
-import { API_BASE_URI } from "../../env.js";
+import { VITE_API_BASE_URI } from "../../env.js";
 
 const createProductService = async (data) => {
-    const response = await fetch(`${API_BASE_URI}api/products`, {
+    const response = await fetch(`${VITE_API_BASE_URI}api/products`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
