@@ -7,7 +7,7 @@ import loginService from "../services/login-service.js";
 import createEmailError from "../utils/errors/email-error.jsx";
 import createPasswordError from "../utils/errors/password-error.jsx";
 import loginUserFormSchema from "../utils/zod-schemas/login-user-schema.js";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const LoginForm = () => {
     const [showPassword, setShowPassword] = useState(false);
@@ -86,9 +86,9 @@ const LoginForm = () => {
                 </form>
                 <span>
                     Você ainda não tem uma conta?{" "}
-                    <a href="/register" className="a-link">
+                    <Link to="/register" className="a-link">
                         Registrar
-                    </a>
+                    </Link>
                 </span>
             </div>
         </div>

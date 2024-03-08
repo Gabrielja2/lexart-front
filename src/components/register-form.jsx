@@ -9,7 +9,7 @@ import createNameError from "../utils/errors/name-error.jsx";
 import createEmailError from "../utils/errors/email-error.jsx";
 import createPasswordError from "../utils/errors/password-error.jsx";
 import createConfirmPasswordError from "../utils/errors/confirm-password-error.jsx";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 const RegisterForm = () => {
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setshowConfirmPassword] = useState(false);
@@ -115,9 +115,9 @@ const RegisterForm = () => {
                 </form>
                 <span>
                     Ja tem uma conta?{" "}
-                    <a href="/login" className="a-link">
+                    <Link to="/login" className="a-link">
                         Entrar
-                    </a>
+                    </Link>
                 </span>
             </div>
         </div>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ProductCard } from "./product-card.jsx";
 import PropTypes from "prop-types";
 
@@ -7,12 +8,12 @@ const HomeContent = (props) => {
     const renderProductsMap = (products) => {
         return products.map((product, index) => {
             return (
-                <a
+                <Link
                     style={{
                         textDecoration: "none",
                         color: "black",
                     }}
-                    href={`/products/${product.id}`}
+                    to={`/products/${product.id}`}
                     key={index}
                 >
                     <ProductCard
@@ -23,7 +24,7 @@ const HomeContent = (props) => {
                         name={product.name}
                         price={product.price}
                     />
-                </a>
+                </Link>
             );
         });
     };
